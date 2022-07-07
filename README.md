@@ -2,35 +2,35 @@
 A small webapp to generate time schedule for classes. 
 <br><br>
 Link to deployed app-
-* http://www.searchtool.top/<route>
+* http://www.searchtool.top/`<route>`    
   eg. - http://www.searchtool.top/api/class/
 <br><br>
 Routes- 
-* /api/class
+* /api/class  
 	(GET) - show all class data (Each data is also a link to --> /api/class/id)
 	(POST)- input: class number, strength of class, number of sections(max. 3), subjects(must be five)
-	Button('Generate Schedule') - link --> /api/generate
+	Button('Generate Schedule') - link --> /api/generate  
 
-* /api/class/id
-	(GET) - show class data by id 
-	Button('Delete') - delete class data by id
+* /api/class/id  
+	(GET) - show class data by id   
+	Button('Delete') - delete class data by id  
 
-* /api/teacher
+* /api/teacher  
 	(GET) - show all teacher data (Each data is also a link to --> /api/teeacher/id)
-	(POST)- input: teacher name, class, subject
+	(POST)- input: teacher name, class, subject  
 
-* /api/teacher/id
+* /api/teacher/id  
 	(GET) - show teacher data by id
-	Button('Delete') - delete teacher data by id
+	Button('Delete') - delete teacher data by id  
 
-* /api/generate
-	(GET) - get CSV file report of generated schedule
+* /api/generate  
+	(GET) - get CSV file report of generated schedule  
 
 
 
 Project Tree-
 
-project
+`project
 │
 │   db.sqlite3
 │   manage.py
@@ -72,7 +72,8 @@ project
     │       show_class.html
     │       show_teachers.html
     │
-    └───__pycache__
+    └───__pycache__`  
+    
 
 
 
