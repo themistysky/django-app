@@ -1,11 +1,11 @@
 # django-app
 A small webapp to generate time schedule for classes. 
 <br><br>
-Link to deployed app-
+## Link to deployed app-
 * <pre>http://www.searchtool.top/<route></pre>     
-  eg. - http://www.searchtool.top/api/class/
-<br><br>
-Routes- 
+  eg. - http://www.searchtool.top/api/class/  
+
+## Routes- 
 * /api/class  
 	(GET) - show all class data (Each data is also a link to --> /api/class/id)
 	(POST)- input: class number, strength of class, number of sections(max. 3), subjects(must be five)  
