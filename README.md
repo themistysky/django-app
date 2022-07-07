@@ -2,25 +2,25 @@
 A small webapp to generate time schedule for classes. 
 <br><br>
 Link to deployed app-
-* http://www.searchtool.top/`<route>`    
+* <pre>http://www.searchtool.top/<route></pre>     
   eg. - http://www.searchtool.top/api/class/
 <br><br>
 Routes- 
 * /api/class  
 	(GET) - show all class data (Each data is also a link to --> /api/class/id)
-	(POST)- input: class number, strength of class, number of sections(max. 3), subjects(must be five)
+	(POST)- input: class number, strength of class, number of sections(max. 3), subjects(must be five)  
 	Button('Generate Schedule') - link --> /api/generate  
 
 * /api/class/id  
-	(GET) - show class data by id   
+	(GET) - show class data by id     
 	Button('Delete') - delete class data by id  
 
 * /api/teacher  
-	(GET) - show all teacher data (Each data is also a link to --> /api/teeacher/id)
+	(GET) - show all teacher data (Each data is also a link to --> /api/teeacher/id)  
 	(POST)- input: teacher name, class, subject  
 
 * /api/teacher/id  
-	(GET) - show teacher data by id
+	(GET) - show teacher data by id  
 	Button('Delete') - delete teacher data by id  
 
 * /api/generate  
@@ -30,7 +30,7 @@ Routes-
 
 Project Tree-
 
-`project
+<pre>project
 │
 │   db.sqlite3
 │   manage.py
@@ -72,17 +72,17 @@ Project Tree-
     │       show_class.html
     │       show_teachers.html
     │
-    └───__pycache__`  
+    └───__pycache__</pre>
     
 
 
 
 Usage-
-* install Python>=3.9
-* open terminal in top most 'project' directory
-* run - pip install django
-* run - python manage.py runserver
-* go to browser and search - http://localhost:8000/<route>
+* install Python>=3.9  
+* open terminal in top most 'project' directory  
+* run - pip install django  
+* run - python manage.py runserver  
+* go to browser and search - <pre>http://localhost:8000/<route></pre>  
 
 
  
