@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Teachers' Data</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="">
+<style>
+h1{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 400;
+    color: rgb(123, 2, 79);
+}
+h2{
+    text-align: left;
+    padding-left: 80px;
+    font-size: 18px;
+    font-weight: 200;
+    color: rgb(3, 99, 143);
+}
+
+    a{
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: rgb(64, 187, 248);  
+    }
+
+    a:active {
+        color: rgb(64, 187, 248);  
+    }
+
+</style>
+<script src=""></script>
+<body>
+<h1>Teachers</h1>
+<h2>Add Teacher</h2>
+{% if not teacher_data %}
+    <form action="" method="post" id="form">{% csrf_token %}
+        <input id="name" placeholder="Enter name" name="name">
+        <input id="class-number" placeholder="Enter class" name="class_number">
+        <input id="subject" placeholder="Enter subject" name="subject">
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="submit" value="Add">
+    </form>
+    <br><br>
+    {% for teacher_data in all_teachers %}
+    <a href="{% url 'teacher_id' teacher_data.id %}"><br>Name = {{teacher_data.name}}<br>ID = {{teacher_data.id}}<br>Class = {{teacher_data.class_num}}<br> Subject = {{teacher_data.subject}}<br></a><hr>
+    {% endfor %}
+{% else %}
+<br>Name = {{teacher_data.name}}<br>ID = {{teacher_data.id}}<br>Class = {{teacher_data.class_num}}<br> Subject = {{teacher_data.subject}}<br><hr>
+    <form method="post" id="delete">{% csrf_token %}
+        <input type="submit" value="Delete">
+    </form>
+{% endif %}
+
+</body>
+</html>
